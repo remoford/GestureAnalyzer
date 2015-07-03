@@ -542,7 +542,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		SendMessage(hEdit,
 			WM_SETTEXT,
 			NULL,
-			(LPARAM)L"Howdy pilgrim\r\n");
+			(LPARAM)L"Howdy pilgrim!\r\n");
 		}
 		break;
 	case WM_COMMAND:
