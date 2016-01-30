@@ -14,6 +14,8 @@
 #include "commctrl.h"
 #include "windows.h"
 #include "resource.h"
+#include <fstream>
+#include <cstdlib>
 #pragma comment(lib, "comctl32.lib")
 
 
@@ -124,6 +126,40 @@ public:
 			endingTime = samples.back().timestamp;
 		}
 	}
+
+	void save() {
+		std::fstream fs;
+
+
+		//if (const char* env_p = std::getenv("APPDATA"))
+
+
+
+		fs.open("C:\\rawsamples.txt", std::fstream::in | std::fstream::out | std::fstream::app);
+
+		fs << "Starting time:" << startingTime << std::endl;
+		fs << "Ending time:" << endingTime << std::endl;
+
+		for (auto iter = samples.begin(); iter != samples.end(); ++iter) {
+			fs << iter->timestamp << ","
+				<< static_cast<int>(iter->value[0]) << ","
+				<< static_cast<int>(iter->value[1]) << ","
+				<< static_cast<int>(iter->value[2]) << ","
+				<< static_cast<int>(iter->value[3]) << ","
+				<< static_cast<int>(iter->value[4]) << ","
+				<< static_cast<int>(iter->value[5]) << ","
+				<< static_cast<int>(iter->value[6]) << ","
+				<< static_cast<int>(iter->value[7]) << std::endl;
+		}
+
+
+		fs.close();
+
+	}
+
+
+
+
 	uint64_t startingTime;
 	uint64_t endingTime;
 	std::vector<emgSample> samples;
@@ -144,6 +180,32 @@ public:
 			samples.push_back(sample);
 		}
 	}
+
+	void save() {
+		std::fstream fs;
+		fs.open("C:\\samples.txt", std::fstream::in | std::fstream::out | std::fstream::app);
+
+		fs << "Starting time:" << startingTime << std::endl;
+		fs << "Ending time:" << endingTime << std::endl;
+		fs << "Sample count:" << sampleCount << std::endl;
+
+		for (auto iter = samples.begin(); iter != samples.end(); ++iter) {
+			fs << iter->timestamp << ","
+				<< static_cast<int>(iter->value[0]) << ","
+				<< static_cast<int>(iter->value[1]) << ","
+				<< static_cast<int>(iter->value[2]) << ","
+				<< static_cast<int>(iter->value[3]) << ","
+				<< static_cast<int>(iter->value[4]) << ","
+				<< static_cast<int>(iter->value[5]) << ","
+				<< static_cast<int>(iter->value[6]) << ","
+				<< static_cast<int>(iter->value[7]) << std::endl;
+		}
+
+
+		fs.close();
+
+	}
+
 	std::vector<emgSample> samples;
 	uint64_t startingTime;
 	uint64_t endingTime;
@@ -203,11 +265,17 @@ VOID GetData(){
 			hubPtr->run(5000);
 		}
 		myRawEmgDataPtr->Finalize();
+
+		myRawEmgDataPtr->save();
+
+
 		if (myNormalizedEmgDataPtr != NULL){
 			delete myNormalizedEmgDataPtr;
 		}
 		myNormalizedEmgDataPtr = new NormalizedEmgData;
 		NormalizeEmgData(myNormalizedEmgDataPtr);
+
+		myNormalizedEmgDataPtr->save();
 
 		wchar_t buf[10];
 		PrintMsg((LPARAM)L"Starting Time: ");
