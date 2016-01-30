@@ -41,9 +41,9 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\Josh\Desktop\myo-sdk-win-0.9.0\include;C:\Users\remoford\Documents\Visual Studio 2013\Projects\myo-sdk-win-0.9.0\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);include</IncludePath>
-    <LibraryPath>C:\Users\Josh\Desktop\myo-sdk-win-0.9.0\lib;C:\Users\remoford\Documents\Visual Studio 2013\Projects\myo-sdk-win-0.9.0\lib;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);lib</LibraryPath>
-    <ExecutablePath>C:\Users\Josh\Desktop\myo-sdk-win-0.9.0\bin;bin;$(ExecutablePath)</ExecutablePath>
+    <IncludePath>C:\myo-sdk-win-0.9.0\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);include</IncludePath>
+    <LibraryPath>C:\myo-sdk-win-0.9.0\lib;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);lib</LibraryPath>
+    <ExecutablePath>C:\myo-sdk-win-0.9.0\bin;bin;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>

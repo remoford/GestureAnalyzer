@@ -9,4 +9,4 @@ When you first load the solution into Visual Studio you need to add three paths 
 You will additionally need to add the path to the myo32.dll:
 
 1. Under properties again, go to Debugging
-2. under Environment add PATH=yourpath;%PATH%
+2. under Environment add PATH=yourpath;%PATH%   
