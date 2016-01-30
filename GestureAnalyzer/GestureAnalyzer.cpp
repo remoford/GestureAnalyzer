@@ -157,8 +157,8 @@ public:
 		timeinfo = localtime(&rawtime);
 		CharStr += asctime(timeinfo);
 
-		// add .dat to filename
-		CharStr += '.dat';
+		// add .csv to filename
+		CharStr += '.csv';
 
 		fs.open(CharStr, std::fstream::in | std::fstream::out | std::fstream::app);
 
@@ -233,8 +233,8 @@ public:
 		timeinfo = localtime(&rawtime);
 		CharStr += asctime(timeinfo);
 
-		// add .dat to filename
-		CharStr += '.dat';
+		// add .csv to filename
+		CharStr += '.csv';
 
 		fs.open(CharStr, std::fstream::in | std::fstream::out | std::fstream::app);
 
