@@ -16,8 +16,11 @@
 #include "resource.h"
 #include <fstream>
 #include <cstdlib>
+#include <ShlObj.h>
+#include <Windows.h>
+#include <cwchar>
+#include <time.h>
 #pragma comment(lib, "comctl32.lib")
-
 
 
 #define MAX_LOADSTRING 100
@@ -127,15 +130,37 @@ public:
 		}
 	}
 
+	// save method for RAW data
 	void save() {
 		std::fstream fs;
+		std::fstream fs;
+		PWSTR *desktopPathPtr = new PWSTR;
+		std::string CharStr = "";
+		int len;
+		time_t rawtime;
+		struct tm * timeinfo;
 
+		// retrieve the path for the user's desktop
+		SHGetKnownFolderPath(FOLDERID_Desktop, 0, NULL, desktopPathPtr);
 
-		//if (const char* env_p = std::getenv("APPDATA"))
+		//convert Unicode to ASCII
+		len = wcslen(*desktopPathPtr);
 
+		for (int i = 0;i < len + 1;i++) {
+			CharStr += static_cast<char>(*(*desktopPathPtr)++);
+		}
 
+		CharStr += "RawData";
 
-		fs.open("C:\\rawsamples.txt", std::fstream::in | std::fstream::out | std::fstream::app);
+		// add time stamp
+		time(&rawtime);
+		timeinfo = localtime(&rawtime);
+		CharStr += asctime(timeinfo);
+
+		// add .dat to filename
+		CharStr += '.dat';
+
+		fs.open(CharStr, std::fstream::in | std::fstream::out | std::fstream::app);
 
 		fs << "Starting time:" << startingTime << std::endl;
 		fs << "Ending time:" << endingTime << std::endl;
@@ -181,9 +206,37 @@ public:
 		}
 	}
 
+	
+	// save method for normalized data
 	void save() {
 		std::fstream fs;
-		fs.open("C:\\samples.txt", std::fstream::in | std::fstream::out | std::fstream::app);
+		PWSTR *desktopPathPtr=new PWSTR;
+		std::string CharStr = "";
+		int len;
+		time_t rawtime;
+		struct tm * timeinfo;
+
+		// retrieve the path for the user's desktop
+		SHGetKnownFolderPath(FOLDERID_Desktop, 0, NULL,desktopPathPtr);
+		
+		//convert Unicode to ASCII
+		len = wcslen(*desktopPathPtr);
+
+		for (int i = 0;i < len + 1;i++){
+			CharStr += static_cast<char>(*(*desktopPathPtr)++);
+    	}
+
+		CharStr += "NormalizedData";
+
+		// add time stamp
+		time(&rawtime);
+		timeinfo = localtime(&rawtime);
+		CharStr += asctime(timeinfo);
+
+		// add .dat to filename
+		CharStr += '.dat';
+
+		fs.open(CharStr, std::fstream::in | std::fstream::out | std::fstream::app);
 
 		fs << "Starting time:" << startingTime << std::endl;
 		fs << "Ending time:" << endingTime << std::endl;
