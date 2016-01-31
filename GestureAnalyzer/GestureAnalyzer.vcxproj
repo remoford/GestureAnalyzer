@@ -105,6 +105,7 @@
     <Image Include="GestureAnalyzer.ico" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="emgExperimentalData\addTotal.sh" />
     <None Include="emgExperimentalData\ahmed\clockwise\rawsamples1.txt.csv" />
     <None Include="emgExperimentalData\ahmed\clockwise\rawsamples2.txt.csv" />
     <None Include="emgExperimentalData\ahmed\clockwise\rawsamples3.txt.csv" />

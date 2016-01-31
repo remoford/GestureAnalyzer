@@ -438,5 +438,6 @@
     <None Include="emgExperimentalData\stacy\counterclockwise\Samples2.txt.csv_total.csv" />
     <None Include="emgExperimentalData\stacy\counterclockwise\Samples3.txt.csv" />
     <None Include="emgExperimentalData\stacy\counterclockwise\Samples3.txt.csv_total.csv" />
+    <None Include="emgExperimentalData\addTotal.sh" />
   </ItemGroup>
 </Project>
