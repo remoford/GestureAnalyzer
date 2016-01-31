@@ -377,6 +377,7 @@
     <None Include="emgExperimentalData\bwisengo\thumbsup\Samples3.txt.csv_total.csv" />
     <None Include="emgExperimentalData\bwisengo\thumbsup\Samples3_stripped.csv" />
     <None Include="emgExperimentalData\bwisengo\thumbsup\Samples3_stripped_processed.csv" />
+    <None Include="emgExperimentalData\EightVector_Results.xlsx" />
     <None Include="emgExperimentalData\gestureDetect.py" />
     <None Include="emgExperimentalData\hang\clockwise\rawsamples1.txt.csv" />
     <None Include="emgExperimentalData\hang\clockwise\rawsamples2.txt.csv" />
@@ -739,6 +740,7 @@
     <None Include="emgExperimentalData\stacy\thumbsup\Samples2.txt.csv" />
     <None Include="emgExperimentalData\stacy\thumbsup\Samples2.txt.csv_total.csv" />
     <None Include="emgExperimentalData\stacy\thumbsup\Samples2_stripped.csv" />
+    <None Include="emgExperimentalData\stacy\thumbsup\Samples2_stripped_processed.csv" />
     <None Include="emgExperimentalData\stacy\thumbsup\Samples3.txt.csv" />
     <None Include="emgExperimentalData\stacy\thumbsup\Samples3.txt.csv_total.csv" />
     <None Include="emgExperimentalData\stacy\thumbsup\Samples3_stripped.csv" />
