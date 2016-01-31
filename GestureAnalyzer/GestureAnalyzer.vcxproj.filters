@@ -698,5 +698,9 @@
     <None Include="emgExperimentalData\stacy\thumbsup\Samples2_stripped_processed.csv" />
     <None Include="emgExperimentalData\EightVector_Results.xlsx" />
     <None Include="emgExperimentalData\bash_history" />
+    <None Include="emgExperimentalData\Fist.csv" />
+    <None Include="emgExperimentalData\Horns.csv" />
+    <None Include="emgExperimentalData\Peace.csv" />
+    <None Include="emgExperimentalData\Thumb.csv" />
   </ItemGroup>
 </Project>

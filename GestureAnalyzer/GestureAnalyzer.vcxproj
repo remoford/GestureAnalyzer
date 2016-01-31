@@ -379,6 +379,7 @@
     <None Include="emgExperimentalData\bwisengo\thumbsup\Samples3_stripped.csv" />
     <None Include="emgExperimentalData\bwisengo\thumbsup\Samples3_stripped_processed.csv" />
     <None Include="emgExperimentalData\EightVector_Results.xlsx" />
+    <None Include="emgExperimentalData\Fist.csv" />
     <None Include="emgExperimentalData\gestureDetect.py" />
     <None Include="emgExperimentalData\hang\clockwise\rawsamples1.txt.csv" />
     <None Include="emgExperimentalData\hang\clockwise\rawsamples2.txt.csv" />
@@ -472,6 +473,7 @@
     <None Include="emgExperimentalData\hang\thumbsup\Samples3.txt.csv_total.csv" />
     <None Include="emgExperimentalData\hang\thumbsup\Samples3_stripped.csv" />
     <None Include="emgExperimentalData\hang\thumbsup\Samples3_stripped_processed.csv" />
+    <None Include="emgExperimentalData\Horns.csv" />
     <None Include="emgExperimentalData\john\clockwise\rawsamples1.txt.csv" />
     <None Include="emgExperimentalData\john\clockwise\rawsamples2.txt.csv" />
     <None Include="emgExperimentalData\john\clockwise\rawsamples3.txt.csv" />
@@ -660,6 +662,7 @@
     <None Include="emgExperimentalData\josh\thumbsup\Samples3.txt.csv_total.csv" />
     <None Include="emgExperimentalData\josh\thumbsup\Samples3_stripped.csv" />
     <None Include="emgExperimentalData\josh\thumbsup\Samples3_stripped_processed.csv" />
+    <None Include="emgExperimentalData\Peace.csv" />
     <None Include="emgExperimentalData\processed.csv" />
     <None Include="emgExperimentalData\stacy\clockwise\rawsamples2.txt.csv" />
     <None Include="emgExperimentalData\stacy\clockwise\rawsamples3.txt.csv" />
@@ -747,6 +750,7 @@
     <None Include="emgExperimentalData\stacy\thumbsup\Samples3_stripped.csv" />
     <None Include="emgExperimentalData\stacy\thumbsup\Samples3_stripped_processed.csv" />
     <None Include="emgExperimentalData\test.csv" />
+    <None Include="emgExperimentalData\Thumb.csv" />
     <None Include="emgExperimentalData\_processed.csv" />
     <None Include="emgExperimentalData\_stripped.csv" />
     <None Include="emgExperimentalData\_stripped_processed.csv" />
