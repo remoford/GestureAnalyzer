@@ -702,5 +702,14 @@
     <None Include="emgExperimentalData\Horns.csv" />
     <None Include="emgExperimentalData\Peace.csv" />
     <None Include="emgExperimentalData\Thumb.csv" />
+    <None Include="emgExperimentalData\polarity\Fist_polaritry.csv" />
+    <None Include="emgExperimentalData\polarity\Fist_stripped.csv" />
+    <None Include="emgExperimentalData\polarity\Horns_polarity.csv" />
+    <None Include="emgExperimentalData\polarity\Horns_stripped.csv" />
+    <None Include="emgExperimentalData\polarity\Peace_polaritry.csv" />
+    <None Include="emgExperimentalData\polarity\Peace_stripped.csv" />
+    <None Include="emgExperimentalData\polarity\Thumb_polaritry.csv" />
+    <None Include="emgExperimentalData\polarity\Thumb_stripped.csv" />
+    <None Include="emgExperimentalData\polarity\vector_center.py" />
   </ItemGroup>
 </Project>
