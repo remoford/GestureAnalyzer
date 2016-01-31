@@ -1,0 +1,500 @@
+    3  ls
+    4  mkdir GestureAnalyzer
+    5  mv master.zip GestureAnalyzer/.
+    6  cd GestureAnalyzer/
+    7  ls
+    8  unzip master.zip 
+    9  ls
+   10  cd GestureAnalyzer-master/
+   11  ls
+   12  cd GestureAnalyzer
+   13  ls
+   14  cd emgExperimentalData/
+   15  ls
+   16  find
+   17  cat ./hang/clockwise/Samples1.txt
+   18  ls
+   19  find
+   20  find | grep txt
+   21  find | grep txt | while read x ; do echo mv $x $x.csv ; done
+   22  find | grep txt | while read x ; do mv $x $x.csv ; done
+   23  find | grep csv
+   24  find | grep csv | grep -v raw
+   25  find | grep csv | grep -v raw | while read x ; do cat $x ; done
+   26  find | grep csv | grep -v raw | while read x ; do cat $x | cut -d',' -f2- ; done
+   27  find | grep csv | grep -v raw | while read x ; do cat $x | cut -d',' -f2- | tr ',' '+'; done
+   28  find | grep csv | grep -v raw | while read x ; do $(($(cat $x | cut -d',' -f2- | tr ',' '+'))); done
+   29  find | grep csv | grep -v raw | while read x ; do echo $(($(cat $x | cut -d',' -f2- | tr ',' '+'))); done
+   30  find | grep csv | grep -v raw | while read x ; do cat $x | cut -d',' -f2- | tr ',' '+' | bc; done
+   31  find | grep csv | grep -v raw | while read x ; do cat $x | cut -d',' -f2- | tr ',' '+' | bc; done 2>&1 | grep illegal
+   32  find | grep csv | grep -v raw | while read x ; do cat $x | grep S ; done 2>&1
+   33  find | grep csv | grep -v raw | while read x ; do cat $x | grep -v ':' | | cut -d',' -f2- ; done 2>&1
+   34  find | grep csv | grep -v raw | while read x ; do cat $x | grep -v ':' | cut -d',' -f2- ; done 2>&1
+   35  find | grep csv | grep -v raw | while read x ; do cat $x | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc; done 2>&1
+   36  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc; done ; done
+   37  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo "$y," ; echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc; done ; done
+   38  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo -n "$y," ; echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc; done ; done
+   39  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo -n "$y," ; echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc > $x_with_total.csv; done ; done
+   40  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo -n "$y," ; echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc ; done > $x_with_total.csv ; done
+   41  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo -n "$y," ; echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc ; echo ; done > $x_with_total.csv ; done
+   42  ls
+   43  wget https://github.com/remoford/GestureAnalyzer/archive/master.zip
+   44  ls
+   45  mkdir GestureAnalyzer
+   46  mv master.zip GestureAnalyzer/.
+   47  cd GestureAnalyzer/
+   48  ls
+   49  unzip master.zip 
+   50  ls
+   51  cd GestureAnalyzer-master/
+   52  ls
+   53  cd GestureAnalyzer
+   54  ls
+   55  cd emgExperimentalData/
+   56  ls
+   57  find
+   58  cat ./hang/clockwise/Samples1.txt
+   59  ls
+   60  find
+   61  find | grep txt
+   62  find | grep txt | while read x ; do echo mv $x $x.csv ; done
+   63  find | grep txt | while read x ; do mv $x $x.csv ; done
+   64  find | grep csv
+   65  find | grep csv | grep -v raw
+   66  find | grep csv | grep -v raw | while read x ; do cat $x ; done
+   67  find | grep csv | grep -v raw | while read x ; do cat $x | cut -d',' -f2- ; done
+   68  find | grep csv | grep -v raw | while read x ; do cat $x | cut -d',' -f2- | tr ',' '+'; done
+   69  find | grep csv | grep -v raw | while read x ; do $(($(cat $x | cut -d',' -f2- | tr ',' '+'))); done
+   70  find | grep csv | grep -v raw | while read x ; do echo $(($(cat $x | cut -d',' -f2- | tr ',' '+'))); done
+   71  find | grep csv | grep -v raw | while read x ; do cat $x | cut -d',' -f2- | tr ',' '+' | bc; done
+   72  find | grep csv | grep -v raw | while read x ; do cat $x | cut -d',' -f2- | tr ',' '+' | bc; done 2>&1 | grep illegal
+   73  find | grep csv | grep -v raw | while read x ; do cat $x | grep S ; done 2>&1
+   74  find | grep csv | grep -v raw | while read x ; do cat $x | grep -v ':' | | cut -d',' -f2- ; done 2>&1
+   75  find | grep csv | grep -v raw | while read x ; do cat $x | grep -v ':' | cut -d',' -f2- ; done 2>&1
+   76  find | grep csv | grep -v raw | while read x ; do cat $x | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc; done 2>&1
+   77  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc; done ; done
+   78  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo "$y," ; echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc; done ; done
+   79  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo -n "$y," ; echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc; done ; done
+   80  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo -n "$y," ; echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc > $x_with_total.csv; done ; done
+   81  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo -n "$y," ; echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc ; done > $x_with_total.csv ; done
+   82  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo -n "$y," ; echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc ; echo ; done > $x_with_total.csv ; done
+   83  find | grep csv | head
+   84  find | grep csv | total
+   85  find | grep csv | grep total
+   86  ls
+   87  find | grep total
+   88  find
+   89  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo -n "$y," ; echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc ; echo ; done ; done
+   90  ls
+   91  wget https://github.com/remoford/GestureAnalyzer/archive/master.zip
+   92  ls
+   93  mkdir GestureAnalyzer
+   94  mv master.zip GestureAnalyzer/.
+   95  cd GestureAnalyzer/
+   96  ls
+   97  unzip master.zip 
+   98  ls
+   99  cd GestureAnalyzer-master/
+  100  ls
+  101  cd GestureAnalyzer
+  102  ls
+  103  cd emgExperimentalData/
+  104  ls
+  105  find
+  106  cat ./hang/clockwise/Samples1.txt
+  107  ls
+  108  find
+  109  find | grep txt
+  110  find | grep txt | while read x ; do echo mv $x $x.csv ; done
+  111  find | grep txt | while read x ; do mv $x $x.csv ; done
+  112  find | grep csv
+  113  find | grep csv | grep -v raw
+  114  find | grep csv | grep -v raw | while read x ; do cat $x ; done
+  115  find | grep csv | grep -v raw | while read x ; do cat $x | cut -d',' -f2- ; done
+  116  find | grep csv | grep -v raw | while read x ; do cat $x | cut -d',' -f2- | tr ',' '+'; done
+  117  find | grep csv | grep -v raw | while read x ; do $(($(cat $x | cut -d',' -f2- | tr ',' '+'))); done
+  118  find | grep csv | grep -v raw | while read x ; do echo $(($(cat $x | cut -d',' -f2- | tr ',' '+'))); done
+  119  find | grep csv | grep -v raw | while read x ; do cat $x | cut -d',' -f2- | tr ',' '+' | bc; done
+  120  find | grep csv | grep -v raw | while read x ; do cat $x | cut -d',' -f2- | tr ',' '+' | bc; done 2>&1 | grep illegal
+  121  find | grep csv | grep -v raw | while read x ; do cat $x | grep S ; done 2>&1
+  122  find | grep csv | grep -v raw | while read x ; do cat $x | grep -v ':' | | cut -d',' -f2- ; done 2>&1
+  123  find | grep csv | grep -v raw | while read x ; do cat $x | grep -v ':' | cut -d',' -f2- ; done 2>&1
+  124  find | grep csv | grep -v raw | while read x ; do cat $x | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc; done 2>&1
+  125  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc; done ; done
+  126  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo "$y," ; echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc; done ; done
+  127  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo -n "$y," ; echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc; done ; done
+  128  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo -n "$y," ; echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc > $x_with_total.csv; done ; done
+  129  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo -n "$y," ; echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc ; done > $x_with_total.csv ; done
+  130  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo -n "$y," ; echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc ; echo ; done > $x_with_total.csv ; done
+  131  find | grep csv | head
+  132  find | grep csv | total
+  133  find | grep csv | grep total
+  134  ls
+  135  find | grep total
+  136  find
+  137  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo -n "$y," ; echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc ; echo ; done ; done
+  138  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo -n "$y," ; echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc ; done ; done
+  139  ls
+  140  wget https://github.com/remoford/GestureAnalyzer/archive/master.zip
+  141  ls
+  142  mkdir GestureAnalyzer
+  143  mv master.zip GestureAnalyzer/.
+  144  cd GestureAnalyzer/
+  145  ls
+  146  unzip master.zip 
+  147  ls
+  148  cd GestureAnalyzer-master/
+  149  ls
+  150  cd GestureAnalyzer
+  151  ls
+  152  cd emgExperimentalData/
+  153  ls
+  154  find
+  155  cat ./hang/clockwise/Samples1.txt
+  156  ls
+  157  find
+  158  find | grep txt
+  159  find | grep txt | while read x ; do echo mv $x $x.csv ; done
+  160  find | grep txt | while read x ; do mv $x $x.csv ; done
+  161  find | grep csv
+  162  find | grep csv | grep -v raw
+  163  find | grep csv | grep -v raw | while read x ; do cat $x ; done
+  164  find | grep csv | grep -v raw | while read x ; do cat $x | cut -d',' -f2- ; done
+  165  find | grep csv | grep -v raw | while read x ; do cat $x | cut -d',' -f2- | tr ',' '+'; done
+  166  find | grep csv | grep -v raw | while read x ; do $(($(cat $x | cut -d',' -f2- | tr ',' '+'))); done
+  167  find | grep csv | grep -v raw | while read x ; do echo $(($(cat $x | cut -d',' -f2- | tr ',' '+'))); done
+  168  find | grep csv | grep -v raw | while read x ; do cat $x | cut -d',' -f2- | tr ',' '+' | bc; done
+  169  find | grep csv | grep -v raw | while read x ; do cat $x | cut -d',' -f2- | tr ',' '+' | bc; done 2>&1 | grep illegal
+  170  find | grep csv | grep -v raw | while read x ; do cat $x | grep S ; done 2>&1
+  171  find | grep csv | grep -v raw | while read x ; do cat $x | grep -v ':' | | cut -d',' -f2- ; done 2>&1
+  172  find | grep csv | grep -v raw | while read x ; do cat $x | grep -v ':' | cut -d',' -f2- ; done 2>&1
+  173  find | grep csv | grep -v raw | while read x ; do cat $x | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc; done 2>&1
+  174  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc; done ; done
+  175  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo "$y," ; echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc; done ; done
+  176  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo -n "$y," ; echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc; done ; done
+  177  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo -n "$y," ; echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc > $x_with_total.csv; done ; done
+  178  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo -n "$y," ; echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc ; done > $x_with_total.csv ; done
+  179  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo -n "$y," ; echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc ; echo ; done > $x_with_total.csv ; done
+  180  find | grep csv | head
+  181  find | grep csv | total
+  182  find | grep csv | grep total
+  183  ls
+  184  find | grep total
+  185  find
+  186  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo -n "$y," ; echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc ; echo ; done ; done
+  187  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo -n "$y," ; echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc ; done ; done
+  188  top
+  189  ls
+  190  cd GestureAnalyzer/
+  191  ls
+  192  cd GestureAnalyzer-master/
+  193  ls
+  194  cd GestureAnalyzer
+  195  ls
+  196  cd emgExperimentalData/
+  197  ls
+  198  find | grep total
+  199  find
+  200  find | grep total
+  201  top
+  202  ls
+  203  vim gestureDetect.py
+  204  ls
+  205  cat ahmed/
+  206  cat ahmed/peace/Samples1.txt.csv_total.csv 
+  207  vim gestureDetect.py
+  208  chmod +x gestureDetect.py 
+  209  vim gestureDetect.py
+  210  ./gestureDetect.py 
+  211  vim gestureDetect.py
+  212  ./gestureDetect.py 
+  213  vim gestureDetect.py
+  214  ./gestureDetect.py 
+  215  vim gestureDetect.py
+  216  ./gestureDetect.py 
+  217  vim gestureDetect.py
+  218  ./gestureDetect.py 
+  219  vim gestureDetect.py
+  220  ./gestureDetect.py 
+  221  vim gestureDetect.py
+  222  ./gestureDetect.py 
+  223  vim gestureDetect.py
+  224  ./gestureDetect.py 
+  225  vim gestureDetect.py
+  226  ./gestureDetect.py 
+  227  vim gestureDetect.py
+  228  ./gestureDetect.py 
+  229  vim gestureDetect.py
+  230  ./gestureDetect.py 
+  231  vim gestureDetect.py
+  232  ./gestureDetect.py 
+  233  python --version
+  234  ./gestureDetect.py 
+  235  vim gestureDetect.py
+  236  ./gestureDetect.py 
+  237  vim gestureDetect.py
+  238  cp ahmed/peace/Samples1.txt.csv_total.csv test.csv
+  239  vim test.csv 
+  240  vim gestureDetect.py
+  241  ./gestureDetect.py 
+  242  vim gestureDetect.py
+  243  ./gestureDetect.py 
+  244  vim gestureDetect.py
+  245  ./gestureDetect.py 
+  246  vim gestureDetect.py
+  247  ./gestureDetect.py 
+  248  vim gestureDetect.py
+  249  ./gestureDetect.py 
+  250  vim gestureDetect.py
+  251  ./gestureDetect.py 
+  252  vim gestureDetect.py
+  253  ./gestureDetect.py 
+  254  vim gestureDetect.py
+  255  ./gestureDetect.py 
+  256  vim gestureDetect.py
+  257  ./gestureDetect.py 
+  258  vim gestureDetect.py
+  259  ./gestureDetect.py 
+  260  vim gestureDetect.py
+  261  ./gestureDetect.py 
+  262  vim gestureDetect.py
+  263  ./gestureDetect.py 
+  264  vim gestureDetect.py
+  265  ./gestureDetect.py 
+  266  vim gestureDetect.py
+  267  ./gestureDetect.py 
+  268  vim gestureDetect.py
+  269  ./gestureDetect.py 
+  270  vim gestureDetect.py
+  271  ./gestureDetect.py 
+  272  vim gestureDetect.py
+  273  ./gestureDetect.py 
+  274  vim gestureDetect.py
+  275  ./gestureDetect.py 
+  276  vim gestureDetect.py
+  277  ./gestureDetect.py 
+  278  vim gestureDetect.py
+  279  ./gestureDetect.py 
+  280  vim gestureDetect.py
+  281  ./gestureDetect.py 
+  282  vim gestureDetect.py
+  283  ./gestureDetect.py 
+  284  vim gestureDetect.py
+  285  ./gestureDetect.py 
+  286  vim gestureDetect.py
+  287  ./gestureDetect.py 
+  288  vim gestureDetect.py
+  289  ./gestureDetect.py 
+  290  vim gestureDetect.py
+  291  ./gestureDetect.py 
+  292  vim gestureDetect.py
+  293  ./gestureDetect.py 
+  294  python
+  295  ./gestureDetect.py 
+  296  vim gestureDetect.py
+  297  ./gestureDetect.py 
+  298  vim gestureDetect.py
+  299  ./gestureDetect.py 
+  300  vim gestureDetect.py
+  301  ./gestureDetect.py 
+  302  vim gestureDetect.py
+  303  ./gestureDetect.py 
+  304  vim gestureDetect.py
+  305  ./gestureDetect.py 
+  306  vim gestureDetect.py
+  307  ./gestureDetect.py 
+  308  vim gestureDetect.py
+  309  ./gestureDetect.py 
+  310  vim gestureDetect.py
+  311  ./gestureDetect.py 
+  312  vim gestureDetect.py
+  313  ./gestureDetect.py 
+  314  vim gestureDetect.py
+  315  ./gestureDetect.py 
+  316  vim gestureDetect.py
+  317  ./gestureDetect.py 
+  318  vim gestureDetect.py
+  319  ./gestureDetect.py 
+  320  vim gestureDetect.py
+  321  ./gestureDetect.py 
+  322  vim gestureDetect.py
+  323  ./gestureDetect.py 
+  324  vim gestureDetect.py
+  325  ./gestureDetect.py 
+  326  vim gestureDetect.py
+  327  ./gestureDetect.py 
+  328  vim gestureDetect.py
+  329  ./gestureDetect.py 
+  330  ./gestureDetect.py  > processed.csv
+  331  vim gestureDetect.py
+  332  ./gestureDetect.py  > processed.csv
+  333  vim gestureDetect.py
+  334  python
+  335  vim gestureDetect.py
+  336  ./gestureDetect.py  > processed.csv
+  337  vim gestureDetect.py
+  338  ./gestureDetect.py  > processed.csv
+  339  vim gestureDetect.py
+  340  ./gestureDetect.py  > processed.csv
+  341  vim gestureDetect.py
+  342  ./gestureDetect.py  > processed.csv
+  343  vim gestureDetect.py
+  344  ./gestureDetect.py  > processed.csv
+  345  vim gestureDetect.py
+  346  ./gestureDetect.py  
+  347  vim gestureDetect.py
+  348  ./gestureDetect.py  > processed.csv
+  349  vim gestureDetect.py
+  350  ./gestureDetect.py  > processed.csv
+  351  vim gestureDetect.py
+  352  ./gestureDetect.py  > processed.csv
+  353  ls
+  354  find ./ | grep csv
+  355  find ./ | grep "^Samples"
+  356  find ./ | egrep "^Samples"
+  357  find ./ | egrep "/Samples"
+  358  find ./ | egrep "/Samples[0-3]\.txt\.csv$"
+  359  find ./ | egrep "/Samples[0-3]\.txt\.csv$" | while read filename ; do echo $filename ; done
+  360  find ./ | egrep "/Samples[0-3]\.txt\.csv$" | while read filename ; do echo ./gestureDetect.py $filename > $filename_processed.csv; done
+  361  ls
+  362  find ./ | egrep "/Samples[0-3]\.txt\.csv$" | while read filename ; do echo $filename; done
+  363  find ./ | egrep "/Samples[0-3]\.txt\.csv$" | while read filename ; do echo gestureDetect $filename; done
+  364  find ./ | egrep "/Samples[0-3]\.txt\.csv$" | while read filename ; do echo gestureDetect $filename > $(echo $filename | cut -'.' -f1)_processed.csv; done
+  365  find ./ | egrep "/Samples[0-3]\.txt\.csv$" | while read filename ; do echo gestureDetect $filename > $(echo $filename | cut -d'.' -f1)_processed.csv; done
+  366  find ./ | egrep "/Samples[0-3]\.txt\.csv$" | while read filename ; do echo gestureDetect $filename  $(echo $filename | cut -'.' -f1)_processed.csv; done
+  367  find ./ | egrep "/Samples[0-3]\.txt\.csv$" | while read filename ; do echo gestureDetect $filename  $(echo $filename | cut -d'.' -f1)_processed.csv; done
+  368  find ./ | egrep "/Samples[0-3]\.txt\.csv$" | while read filename ; do OUTFILE=$(echo $filename | cut -d'.' -f1)_processed.csv; echo $filename $OUTFILE ; done
+  369  find ./ | egrep "/Samples[0-3]\.txt\.csv$" | while read filename ; do OUTFILE="$(echo $filename | cut -d'.' -f1)""_processed.csv"; echo $filename $OUTFILE ; done
+  370  find ./ | egrep "/Samples[0-3]\.txt\.csv$" | while read filename ; do OUTFILE="$(echo $filename | cut -d'.' -f1)"; echo $filename $OUTFILE ; done
+  371  vim gestureDetect.py 
+  372  ls
+  373  cd john
+  374  ls
+  375  cd horns/
+  376  ls
+  377  cd ../..
+  378  vim gestureDetect.py 
+  379  ls
+  380  ./gestureDetect.py test.csv 
+  381  vim gestureDetect.py 
+  382  ./gestureDetect.py test.csv 
+  383  ls
+  384  cd john/
+  385  ls
+  386  cd horns/
+  387  ls
+  388  ../../gestureDetect.py Samples1.txt.csv Processed1.csv
+  389  vim Samples1.txt.csv
+  390  ../../gestureDetect.py Samples1.txt.csv
+  391  ls
+  392  cat Samples1.txt.csv
+  393  cat ../../test.csv 
+  394  ls
+  395  ../../gestureDetect.py Samples1.txt.csv_total.csv 
+  396  vim Samples1.txt.csv_total.csv
+  397  ../../gestureDetect.py Samples1.txt.csv_total.csv 
+  398  ../../gestureDetect.py Samples1.txt.csv_total.csv > processed1.csv
+  399  vim Samples2.txt.csv_total.csv 
+  400  ../../gestureDetect.py Samples2.txt.csv_total.csv > processed2.csv
+  401  vim Samples3.txt.csv_total.csv 
+  402  ../../gestureDetect.py Samples3.txt.csv_total.csv > processed3.csv
+  403  vim ../../gestureDetect.py 
+  404  python --version
+  405  vim ../../gestureDetect.py 
+  406  cd ../..
+  407  ls
+  408  ./gestureDetect.py test.csv 
+  409  ./gestureDetect.py test.csv > processed.csv
+  410  vim gestureDetect.py 
+  411  ./gestureDetect.py test.csv > processed.csv
+  412  vim gestureDetect.py 
+  413  ./gestureDetect.py test.csv > processed.csv
+  414  vim gestureDetect.py 
+  415  ./gestureDetect.py test.csv > processed.csv
+  416  vim gestureDetect.py 
+  417  ./gestureDetect.py test.csv > processed.csv
+  418  vim gestureDetect.py 
+  419  ./gestureDetect.py test.csv > processed.csv
+  420  vim gestureDetect.py 
+  421  ./gestureDetect.py test.csv > processed.csv
+  422  vim gestureDetect.py 
+  423  ./gestureDetect.py test.csv > processed.csv
+  424  vim gestureDetect.py 
+  425  ./gestureDetect.py test.csv > processed.csv
+  426  history
+  427  vim gestureDetect.py 
+  428  history
+  429  history | less
+  430  ls
+  431  vim addTotal.sh
+  432  chmod +x addTotal.sh 
+  433  ls
+  434  find | grep total
+  435  find | grep total.csv
+  436  find | grep total.csv | while read INFILE ; do OUTFILE="$(echo $INFILE | cut -d'/' -f2 | cut -d'.' -f1)""_processed.csv" ; do echo $INFILE $OUTFILE ; done
+  437  find | grep total.csv | while read INFILE ; do OUTFILE="$(echo $INFILE | cut -d'/' -f2 | cut -d'.' -f1)""_processed.csv" ; echo $INFILE $OUTFILE ; done
+  438  find | grep total.csv | while read INFILE ; do OUTFILE="$(echo $INFILE | cut -d'/' -f2 | cut -d'.' -f1)""_processed.csv" ; echo ./gestureDetect.py $INFILE $OUTFILE ; done
+  439  find | grep total.csv | while read INFILE ; do OUTFILE="$(echo $INFILE | cut -d'.' -f1)""_processed.csv" ; echo ./gestureDetect.py $INFILE $OUTFILE ; done
+  440  find | grep total.csv | while read INFILE ; do OUTFILE="$(echo $INFILE | cut -d'.' -f2)""_processed.csv" ; echo ./gestureDetect.py $INFILE $OUTFILE ; done
+  441  find | grep total.csv | while read INFILE ; do OUTFILE=".""$(echo $INFILE | cut -d'.' -f2)""_processed.csv" ; echo ./gestureDetect.py $INFILE $OUTFILE ; done
+  442  ./gestureDetect.py ./hang/horns/Samples1.txt.csv_total.csv > ./hang/horns/Samples1_processed.csv
+  443  find | grep total.csv | while read INFILE ; do OUTFILE=".""$(echo $INFILE | cut -d'.' -f2)""_stripped.csv" ; grep -v ':' < $INFILE ; done
+  444  top
+  445  ls
+  446  wget https://github.com/remoford/GestureAnalyzer/archive/master.zip
+  447  ls
+  448  mkdir GestureAnalyzer
+  449  mv master.zip GestureAnalyzer/.
+  450  cd GestureAnalyzer/
+  451  ls
+  452  unzip master.zip 
+  453  ls
+  454  cd GestureAnalyzer-master/
+  455  ls
+  456  cd GestureAnalyzer
+  457  ls
+  458  cd emgExperimentalData/
+  459  ls
+  460  find
+  461  cat ./hang/clockwise/Samples1.txt
+  462  ls
+  463  find
+  464  find | grep txt
+  465  find | grep txt | while read x ; do echo mv $x $x.csv ; done
+  466  find | grep txt | while read x ; do mv $x $x.csv ; done
+  467  find | grep csv
+  468  find | grep csv | grep -v raw
+  469  find | grep csv | grep -v raw | while read x ; do cat $x ; done
+  470  find | grep csv | grep -v raw | while read x ; do cat $x | cut -d',' -f2- ; done
+  471  find | grep csv | grep -v raw | while read x ; do cat $x | cut -d',' -f2- | tr ',' '+'; done
+  472  find | grep csv | grep -v raw | while read x ; do $(($(cat $x | cut -d',' -f2- | tr ',' '+'))); done
+  473  find | grep csv | grep -v raw | while read x ; do echo $(($(cat $x | cut -d',' -f2- | tr ',' '+'))); done
+  474  find | grep csv | grep -v raw | while read x ; do cat $x | cut -d',' -f2- | tr ',' '+' | bc; done
+  475  find | grep csv | grep -v raw | while read x ; do cat $x | cut -d',' -f2- | tr ',' '+' | bc; done 2>&1 | grep illegal
+  476  find | grep csv | grep -v raw | while read x ; do cat $x | grep S ; done 2>&1
+  477  find | grep csv | grep -v raw | while read x ; do cat $x | grep -v ':' | | cut -d',' -f2- ; done 2>&1
+  478  find | grep csv | grep -v raw | while read x ; do cat $x | grep -v ':' | cut -d',' -f2- ; done 2>&1
+  479  find | grep csv | grep -v raw | while read x ; do cat $x | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc; done 2>&1
+  480  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc; done ; done
+  481  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo "$y," ; echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc; done ; done
+  482  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo -n "$y," ; echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc; done ; done
+  483  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo -n "$y," ; echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc > $x_with_total.csv; done ; done
+  484  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo -n "$y," ; echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc ; done > $x_with_total.csv ; done
+  485  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo -n "$y," ; echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc ; echo ; done > $x_with_total.csv ; done
+  486  find | grep csv | head
+  487  find | grep csv | total
+  488  find | grep csv | grep total
+  489  ls
+  490  find | grep total
+  491  find
+  492  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo -n "$y," ; echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc ; echo ; done ; done
+  493  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo -n "$y," ; echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc ; done ; done
+  494  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo -n "$y," ; echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc ; done > $x_total.csv ; done
+  495  ls
+  496  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo -n "$y," ; echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc ; done > "$x""_total.csv" ; done
+  497  find | grep total
+  498  cat ./bwisengo/peace/Samples2.txt.csv_total.csv
+  499  find | grep csv | grep -v raw | while read x ; do cat $x | while read y ; do echo -n "$y," ; echo $y | grep -v ':' | cut -d',' -f2- | tr ',' '+' | bc ; done > "$x""_total.csv" ; done
+  500  screen
+  501  history
+  502  history > bash_history

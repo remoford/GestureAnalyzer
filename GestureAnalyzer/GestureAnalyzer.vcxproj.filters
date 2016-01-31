@@ -697,5 +697,6 @@
     <None Include="emgExperimentalData\ahmed\clockwise\Samples1_stripped.csv" />
     <None Include="emgExperimentalData\stacy\thumbsup\Samples2_stripped_processed.csv" />
     <None Include="emgExperimentalData\EightVector_Results.xlsx" />
+    <None Include="emgExperimentalData\bash_history" />
   </ItemGroup>
 </Project>

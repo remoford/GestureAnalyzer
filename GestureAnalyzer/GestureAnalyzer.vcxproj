@@ -286,6 +286,7 @@
     <None Include="emgExperimentalData\ashlin\thumbsup\Samples3.txt.csv_total.csv" />
     <None Include="emgExperimentalData\ashlin\thumbsup\Samples3_stripped.csv" />
     <None Include="emgExperimentalData\ashlin\thumbsup\Samples3_stripped_processed.csv" />
+    <None Include="emgExperimentalData\bash_history" />
     <None Include="emgExperimentalData\bwisengo\clockwise\rawsamples1.txt.csv" />
     <None Include="emgExperimentalData\bwisengo\clockwise\rawsamples2.txt.csv" />
     <None Include="emgExperimentalData\bwisengo\clockwise\rawsamples3.txt.csv" />
