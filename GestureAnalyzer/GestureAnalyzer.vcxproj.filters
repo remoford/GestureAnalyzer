@@ -16,6 +16,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
+    <Text Include="emgExperimentalData\polarity.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -49,6 +50,9 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="GestureAnalyzer.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="emgExperimentalData\polarity_plot.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
@@ -711,5 +715,6 @@
     <None Include="emgExperimentalData\polarity\Thumb_polaritry.csv" />
     <None Include="emgExperimentalData\polarity\Thumb_stripped.csv" />
     <None Include="emgExperimentalData\polarity\vector_center.py" />
+    <None Include="emgExperimentalData\Polarity_plots.xlsx" />
   </ItemGroup>
 </Project>

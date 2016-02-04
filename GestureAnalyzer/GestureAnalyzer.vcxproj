@@ -82,6 +82,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Text Include="emgExperimentalData\polarity.txt" />
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -101,6 +102,7 @@
     <ResourceCompile Include="GestureAnalyzer.rc" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="emgExperimentalData\polarity_plot.png" />
     <Image Include="small.ico" />
     <Image Include="GestureAnalyzer.ico" />
   </ItemGroup>
@@ -672,6 +674,7 @@
     <None Include="emgExperimentalData\polarity\Thumb_polaritry.csv" />
     <None Include="emgExperimentalData\polarity\Thumb_stripped.csv" />
     <None Include="emgExperimentalData\polarity\vector_center.py" />
+    <None Include="emgExperimentalData\Polarity_plots.xlsx" />
     <None Include="emgExperimentalData\processed.csv" />
     <None Include="emgExperimentalData\stacy\clockwise\rawsamples2.txt.csv" />
     <None Include="emgExperimentalData\stacy\clockwise\rawsamples3.txt.csv" />
