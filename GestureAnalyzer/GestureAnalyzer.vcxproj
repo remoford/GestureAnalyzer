@@ -108,6 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="emgExperimentalData\addTotal.py" />
+    <None Include="emgExperimentalData\addTotal.sh" />
     <None Include="emgExperimentalData\formattedSamples\ahmed_clockwise_rawsamples1.spfmt" />
     <None Include="emgExperimentalData\formattedSamples\ahmed_clockwise_rawsamples2.spfmt" />
     <None Include="emgExperimentalData\formattedSamples\ahmed_counterclockwise_rawsamples1.spfmt" />
@@ -210,6 +211,7 @@
     <None Include="emgExperimentalData\formattedSamples\stacy_thumbsup_rawsamples1.spfmt" />
     <None Include="emgExperimentalData\formattedSamples\stacy_thumbsup_rawsamples2.spfmt" />
     <None Include="emgExperimentalData\formattedSamples\stacy_thumbsup_rawsamples3.spfmt" />
+    <None Include="emgExperimentalData\gestureDetect.py" />
     <None Include="emgExperimentalData\oldScripts\addTotal.sh" />
     <None Include="emgExperimentalData\cast2int.py" />
     <None Include="emgExperimentalData\csv2pktStream.py" />
@@ -490,6 +492,7 @@
     <None Include="emgExperimentalData\interval2shadedRegion.py" />
     <None Include="emgExperimentalData\intervalAverage.py" />
     <None Include="emgExperimentalData\movingAvg.py" />
+    <None Include="emgExperimentalData\oldScripts\gestureDetect.py" />
     <None Include="emgExperimentalData\oldScripts\vector_center.py" />
     <None Include="emgExperimentalData\pipeline.sh" />
     <None Include="emgExperimentalData\plots\EightVector_Results.xlsx" />

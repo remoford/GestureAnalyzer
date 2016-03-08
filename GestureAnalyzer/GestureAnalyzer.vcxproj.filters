@@ -719,7 +719,6 @@
     <None Include="emgExperimentalData\addTotal.py" />
     <None Include="emgExperimentalData\oldScripts\addTotal.sh" />
     <None Include="emgExperimentalData\oldScripts\vector_center.py" />
-    <None Include="emgExperimentalData\oldScripts\gestureDetect.py" />
     <None Include="emgExperimentalData\formattedSamples\ahmed_clockwise_rawsamples1.spfmt" />
     <None Include="emgExperimentalData\formattedSamples\ahmed_clockwise_rawsamples2.spfmt" />
     <None Include="emgExperimentalData\formattedSamples\ahmed_counterclockwise_rawsamples1.spfmt" />
@@ -822,5 +821,8 @@
     <None Include="emgExperimentalData\formattedSamples\stacy_thumbsup_rawsamples1.spfmt" />
     <None Include="emgExperimentalData\formattedSamples\stacy_thumbsup_rawsamples2.spfmt" />
     <None Include="emgExperimentalData\formattedSamples\stacy_thumbsup_rawsamples3.spfmt" />
+    <None Include="emgExperimentalData\gestureDetect.py" />
+    <None Include="emgExperimentalData\addTotal.sh" />
+    <None Include="emgExperimentalData\oldScripts\gestureDetect.py" />
   </ItemGroup>
 </Project>
