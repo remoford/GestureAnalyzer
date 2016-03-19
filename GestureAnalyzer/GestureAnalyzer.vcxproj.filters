@@ -824,5 +824,23 @@
     <None Include="emgExperimentalData\gestureDetect.py" />
     <None Include="emgExperimentalData\addTotal.sh" />
     <None Include="emgExperimentalData\oldScripts\gestureDetect.py" />
+    <None Include="emgExperimentalData\addSequenceNum.py" />
+    <None Include="emgExperimentalData\cast2float.py" />
+    <None Include="emgExperimentalData\combined.gnu" />
+    <None Include="emgExperimentalData\copyColumn.py" />
+    <None Include="emgExperimentalData\doEmAll.sh" />
+    <None Include="emgExperimentalData\normalizeTimestamps.py" />
+    <None Include="emgExperimentalData\pipeline.time" />
+    <None Include="emgExperimentalData\rangeDetect.py" />
+    <None Include="emgExperimentalData\stripColumn.py" />
+    <None Include="emgExperimentalData\topPercent.py" />
+    <None Include="emgExperimentalData\truncate.py" />
+    <None Include="emgExperimentalData\vector.gnu" />
+    <None Include="emgExperimentalData\vector2dat.py" />
+    <None Include="emgExperimentalData\vectorize.py" />
+    <None Include="emgExperimentalData\vectors.gnu" />
+    <None Include="emgExperimentalData\vectorSum2dat.py" />
+    <None Include="emgExperimentalData\vectorSums.gnu" />
+    <None Include="emgExperimentalData\vectorSums.sh" />
   </ItemGroup>
 </Project>

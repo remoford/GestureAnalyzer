@@ -15,18 +15,15 @@ while 1:
 	
 	pkt = json.load(StringIO(line))
 	
-	if pkt["pktType"] != "sample":
-		print json.dumps(pkt)
+	if pkt["pktType"] != "interval":
 		continue
 
-	total = 0.0
-	for channel in pkt["emg"]:
-		total += abs(channel)
-	total = total
-
-	pkt["totalPower"] = total
-
-	print json.dumps(pkt)
+	for idx in range(0,8):
+		vec = pkt["vectors"][idx]
+		print "0\t0\t" + str(vec[0]) + "\t" + str(vec[1])
+		
+	sumVec = pkt["sumVector"]
+	print "0\t0\t" + str(sumVec[0]) + "\t" + str(sumVec[1])
 
 
 

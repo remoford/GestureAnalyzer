@@ -5,6 +5,7 @@ import json
 from StringIO import StringIO
 
 
+
 while 1:
 	try:
 		line = sys.stdin.readline()
@@ -19,15 +20,13 @@ while 1:
 		print json.dumps(pkt)
 		continue
 
-	total = 0.0
-	for channel in pkt["emg"]:
-		total += abs(channel)
-	total = total
+	label = ""
+	for channel in range(0,8):
+		label = "emg" + str(channel)
+		pkt[label] = abs(pkt["emg"][channel])
 
-	pkt["totalPower"] = total
 
 	print json.dumps(pkt)
-
 
 
 

@@ -4,9 +4,10 @@ import sys
 import json
 from StringIO import StringIO
 
-if len(sys.argv) != 2:
+if len(sys.argv) != 3:
         sys.exit('Wrong number of arguments! Expect XRANGE')
 x_range = int(sys.argv[1])
+sourceColumn = sys.argv[2]
 
 
 while 1:
@@ -20,6 +21,9 @@ while 1:
 	pkt = json.load(StringIO(line))
 	
 	if pkt["pktType"] != "interval":
+		continue
+
+	if (pkt["sourceColumn"] != sourceColumn) and (pkt["sourceColumn"] != (sourceColumn + "_derivitive")) and (pkt["sourceColumn"] != (sourceColumn + "_derivitive2nd")):
 		continue
 
 

@@ -29,8 +29,9 @@ while 1:
 			if key == "pktType":
 				continue
 			if key == "emg":
-				for channel in range(0,8):
-					headerStr += "emg" + str(channel) + "\t"
+				continue
+			#	for channel in range(0,8):
+			#		headerStr += "emg" + str(channel) + "\t"
 			else:
 				headerStr += key + "\t"
 		print headerStr
@@ -40,8 +41,9 @@ while 1:
 		if key == "pktType":
 			continue
 		if key == "emg":
-			for channel in range(0,8):
-				dataStr += str(pkt["emg"][channel]) + "\t"
+			continue
+		#	for channel in range(0,8):
+		#		dataStr += str(pkt["emg"][channel]) + "\t"
 
 		else:
 			dataStr += str(pkt[key]) + "\t"

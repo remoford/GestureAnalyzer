@@ -4,6 +4,10 @@ import sys
 import json
 from StringIO import StringIO
 
+if len(sys.argv) != 2:
+        sys.exit('Wrong number of arguments! Expect sourceColumn')
+sourceColumn = sys.argv[1]
+
 
 while 1:
 	try:
@@ -19,12 +23,7 @@ while 1:
 		print json.dumps(pkt)
 		continue
 
-	total = 0.0
-	for channel in pkt["emg"]:
-		total += abs(channel)
-	total = total
-
-	pkt["totalPower"] = total
+	pkt[sourceColumn] = float(pkt[sourceColumn])
 
 	print json.dumps(pkt)
 

@@ -4,7 +4,8 @@ import sys
 import json
 from StringIO import StringIO
 
-
+yMin = 0
+yMax = 0
 while 1:
 	try:
 		line = sys.stdin.readline()
@@ -15,16 +16,23 @@ while 1:
 	
 	pkt = json.load(StringIO(line))
 	
+	if pkt["pktType"] == "footer":
+		pkt["yMin"] = yMin
+		pkt["yMax"] = yMax
+		print json.dumps(pkt)
+		continue
+
 	if pkt["pktType"] != "sample":
 		print json.dumps(pkt)
 		continue
 
-	total = 0.0
-	for channel in pkt["emg"]:
-		total += abs(channel)
-	total = total
 
-	pkt["totalPower"] = total
+	for channel in range(0,8):
+		curVal = pkt["emg"][channel]
+		if curVal > yMax:
+			yMax = curVal
+		if curVal < yMin:
+			yMin = curVal
 
 	print json.dumps(pkt)
 

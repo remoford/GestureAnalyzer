@@ -3,7 +3,8 @@
 import sys
 import json
 from StringIO import StringIO
-import Queue
+#import Queue
+from collections import deque
 
 if len(sys.argv) != 4:
         sys.exit('Wrong number of arguments! Expect sourceColumn destColumn windowSize')
@@ -11,51 +12,42 @@ sourceColumn = sys.argv[1]
 destColumn = sys.argv[2]
 windowSize = int(sys.argv[3])
 
-movingAverage = Queue.Queue()
-
-pastQueue = Queue.Queue()
-
+futureDeque = deque()
+pastDeque = deque()
 
 def computeAverage(oldQueue, indexStr):
-	newQueue = Queue.Queue()
-	#tmpPastQueue = Queue.Queue()
-	size = oldQueue.qsize()
-	pastSize = pastQueue.qsize()
+	futureSize = len(futureDeque)
+	pastSize = len(pastDeque)
 	average = 0
-	averagingCount = 0
-	pastAveragingCount = 0
-	for idx in range(0, size):
-		pkt = oldQueue.get()
+	count = 0
+
+	for idx in range(0, futureSize):
 		if indexStr in pkt:
-			average += pkt[indexStr]
-			averagingCount += 1
-		oldQueue.put(pkt)
+			average += futureDeque[idx][indexStr]
+			count += 1
 
 	for idx in range(0, pastSize):
-		pkt = pastQueue.get()
 		if indexStr in pkt:
-			average += pkt[indexStr]
-			pastAveragingCount += 1
-		pastQueue.put(pkt)
-
-
-	if (averagingCount + pastAveragingCount) == 0:
+			average += pastDeque[idx][indexStr]
+			count += 1
+		
+	if count == 0:
                 return None
-	average = average / (averagingCount + pastAveragingCount)
-	return average
+	else:
+		return average / count
 	
 def returnAverage(pkt):
 	if pkt["pktType"] == "sample":
+		pastDeque.appendleft(pkt)
+		if len(pastDeque) >= len(futureDeque):
+			pastDeque.pop()
 
-		pastQueue.put(pkt)
-		if pastQueue.qsize() >= windowSize:
-			pastQueue.get()
-
-		avgValue = computeAverage(movingAverage, sourceColumn)
+		avgValue = computeAverage(futureDeque, sourceColumn)
 		if avgValue == None:
 			pkt[destColumn] = pkt[sourceColumn]
 		else:
 			pkt[destColumn] = avgValue
+
 	print json.dumps(pkt)
 
 while 1:
@@ -65,19 +57,14 @@ while 1:
 		break
 	if not line:
         	break
-	pkt = json.load(StringIO(line))	
-	movingAverage.put(pkt)
-	if movingAverage.qsize() < windowSize:
+	pkt = json.load(StringIO(line))
+	
+	futureDeque.appendleft(pkt)
+	if len(futureDeque) < windowSize:
 		continue
 	else:
-		returnAverage(movingAverage.get())
+		returnAverage(futureDeque.pop())
 
-while movingAverage.qsize() > 0:
-	returnAverage(movingAverage.get())
-
-
-
-	
-
-
+while len(futureDeque) > 0:
+	returnAverage(futureDeque.pop())
 

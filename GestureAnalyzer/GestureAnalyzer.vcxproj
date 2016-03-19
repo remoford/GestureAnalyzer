@@ -107,8 +107,13 @@
     <Image Include="GestureAnalyzer.ico" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="emgExperimentalData\addSequenceNum.py" />
     <None Include="emgExperimentalData\addTotal.py" />
     <None Include="emgExperimentalData\addTotal.sh" />
+    <None Include="emgExperimentalData\cast2float.py" />
+    <None Include="emgExperimentalData\combined.gnu" />
+    <None Include="emgExperimentalData\copyColumn.py" />
+    <None Include="emgExperimentalData\doEmAll.sh" />
     <None Include="emgExperimentalData\formattedSamples\ahmed_clockwise_rawsamples1.spfmt" />
     <None Include="emgExperimentalData\formattedSamples\ahmed_clockwise_rawsamples2.spfmt" />
     <None Include="emgExperimentalData\formattedSamples\ahmed_counterclockwise_rawsamples1.spfmt" />
@@ -212,6 +217,7 @@
     <None Include="emgExperimentalData\formattedSamples\stacy_thumbsup_rawsamples2.spfmt" />
     <None Include="emgExperimentalData\formattedSamples\stacy_thumbsup_rawsamples3.spfmt" />
     <None Include="emgExperimentalData\gestureDetect.py" />
+    <None Include="emgExperimentalData\normalizeTimestamps.py" />
     <None Include="emgExperimentalData\oldScripts\addTotal.sh" />
     <None Include="emgExperimentalData\cast2int.py" />
     <None Include="emgExperimentalData\csv2pktStream.py" />
@@ -495,6 +501,7 @@
     <None Include="emgExperimentalData\oldScripts\gestureDetect.py" />
     <None Include="emgExperimentalData\oldScripts\vector_center.py" />
     <None Include="emgExperimentalData\pipeline.sh" />
+    <None Include="emgExperimentalData\pipeline.time" />
     <None Include="emgExperimentalData\plots\EightVector_Results.xlsx" />
     <None Include="emgExperimentalData\hackMTdata\hang\clockwise\rawsamples1.txt.csv" />
     <None Include="emgExperimentalData\hackMTdata\hang\clockwise\rawsamples2.txt.csv" />
@@ -871,8 +878,19 @@
     <None Include="emgExperimentalData\hackMTdata\stacy\thumbsup\Samples3.txt.csv_total.csv" />
     <None Include="emgExperimentalData\hackMTdata\stacy\thumbsup\Samples3_stripped.csv" />
     <None Include="emgExperimentalData\hackMTdata\stacy\thumbsup\Samples3_stripped_processed.csv" />
+    <None Include="emgExperimentalData\rangeDetect.py" />
     <None Include="emgExperimentalData\relativeTimestamps.py" />
     <None Include="emgExperimentalData\spfmt2dat.py" />
+    <None Include="emgExperimentalData\stripColumn.py" />
+    <None Include="emgExperimentalData\topPercent.py" />
+    <None Include="emgExperimentalData\truncate.py" />
+    <None Include="emgExperimentalData\vector.gnu" />
+    <None Include="emgExperimentalData\vector2dat.py" />
+    <None Include="emgExperimentalData\vectorize.py" />
+    <None Include="emgExperimentalData\vectors.gnu" />
+    <None Include="emgExperimentalData\vectorSum2dat.py" />
+    <None Include="emgExperimentalData\vectorSums.gnu" />
+    <None Include="emgExperimentalData\vectorSums.sh" />
     <None Include="emgExperimentalData\zeroCross.py" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

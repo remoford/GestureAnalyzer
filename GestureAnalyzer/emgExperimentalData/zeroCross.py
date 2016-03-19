@@ -35,12 +35,16 @@ while 1:
 	if (lastPkt[sourceColumn] > 0) and (pkt[sourceColumn] <= 0):
 		zeroCrossPkt = '{"pktType":"zeroCross","timestamp":'
 		zeroCrossPkt += str(pkt["timestamp"])
-		zeroCrossPkt += ',"sign":"negative"}'
+		zeroCrossPkt += ',"sign":"negative","sourceColumn":"'
+		zeroCrossPkt += str(sourceColumn)
+		zeroCrossPkt += '"}'
 		print zeroCrossPkt
 	if (lastPkt[sourceColumn] <= 0) and (pkt[sourceColumn] > 0):
 		zeroCrossPkt = '{"pktType":"zeroCross","timestamp":'
 		zeroCrossPkt += str(pkt["timestamp"])
-		zeroCrossPkt += ',"sign":"positive"}'
+		zeroCrossPkt += ',"sign":"positive","sourceColumn":"'
+		zeroCrossPkt += str(sourceColumn)
+		zeroCrossPkt += '"}'
 		print zeroCrossPkt
 
 	print json.dumps(pkt)
